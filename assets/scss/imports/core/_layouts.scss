@@ -1,0 +1,56 @@
+/* layout
+------------------------------------------------------------*/
+@-ms-viewport {
+  width: device-width;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  background-color: $main-bg-cl;
+  color: $main-text-cl;
+  font-family: $main-fonts;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1;
+  position: relative;
+  overflow-x: hidden;
+
+  &.--disable-scroll {
+    overflow: hidden;
+  }
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  background-image: url(/assets/img/bg_noise.webp);
+  background-repeat: repeat;
+  mix-blend-mode: multiply;
+}
+
+main {
+  flex: 1;
+}
+
+::selection {
+  background: var(--main-text-cl);
+  color: #fff;
+}
