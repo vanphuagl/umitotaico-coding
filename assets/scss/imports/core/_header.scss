@@ -2,4 +2,36 @@
 ------------------------------------------------------------*/
 
 .c-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  &.is-invert {
+    mix-blend-mode: difference;
+    filter: invert(1);
+  }
+
+  &_right {
+    position: absolute;
+    top: 40px;
+    right: 45px;
+  }
+
+  &_left {
+    position: absolute;
+    top: 40px;
+    left: 45px;
+  }
+
+  &_link {
+    font-family: $ttcommons-fonts;
+    font-weight: 200;
+    font-size: 2.4rem;
+    line-height: 1.54;
+    letter-spacing: 1.92px;
+    width: fit-content;
+    text-align: right;
+    margin-left: auto;
+  }
 }
