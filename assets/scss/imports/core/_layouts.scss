@@ -37,13 +37,18 @@ body {
 }
 
 .layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  background-color: $main-bg-cl;
+  position: relative;
+  z-index: 2;
 
-  background-image: url(/assets/img/bg_noise.webp);
-  background-repeat: repeat;
-  mix-blend-mode: multiply;
+  &_wrapper {
+    background-image: url(/assets/img/bg_noise.webp);
+    background-repeat: repeat;
+    mix-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 }
 
 main {

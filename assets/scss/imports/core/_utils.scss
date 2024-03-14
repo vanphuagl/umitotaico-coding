@@ -30,3 +30,47 @@
     display: block !important;
   }
 }
+
+// keyframes
+@keyframes scroll-down-vertical {
+  0% {
+    height: 0;
+    top: 0;
+  }
+  30% {
+    height: 100%;
+    top: 0;
+  }
+  100%,
+  60% {
+    height: 100%;
+    top: 100%;
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    width: 0;
+    left: 0;
+  }
+
+  30% {
+    width: 100%;
+    left: 0;
+  }
+  100%,
+  60% {
+    width: 100%;
+    left: 100%;
+  }
+}
+
+
+@keyframes reservation-ring {
+  0% {
+    transform: rotate(0);
+  }
+  0% {
+    transform: rotate(1turn);
+  }
+}
