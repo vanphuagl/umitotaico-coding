@@ -48,3 +48,22 @@ const reservation = document.getElementById("reservation");
       : reservation.classList.remove("--active");
   });
 });
+
+/* ------------------------------- scroll fade ------------------------------ */
+
+const jsFade = document.querySelectorAll(".js-fade");
+
+["scroll", "resize", "pageshow", "load"].forEach((evt) => {
+  window.addEventListener(evt, () => {
+    let scrollTop = document.documentElement.scrollTop;
+    let bottom = scrollTop + window.innerHeight;
+
+    jsFade.forEach((items) => {
+      if (bottom > items.offsetTop + 150) {
+        items.classList.add("inview");
+      } else {
+        items.classList.remove("inview");
+      }
+    });
+  });
+});

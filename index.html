@@ -62,25 +62,15 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <picture>
-                            <source media="(max-width: 1023px)" srcset="/assets/img/top/bg_01_sp.webp">
-                            <img draggable='false' src="/assets/img/top/bg_01.webp " alt="Umi to Taico">
-                        </picture>
-                    </div>
-                    <div class="swiper-slide">
-                        <picture>
-                            <source media='(max-width:1023px)'
-                                rcset='https://phytosteam.com/wp/wp-content/themes/phytosteams/assets/images/mainvisual_01.webp'>
-                            <img draggable='false' class="lazyload"
-                                src="https://phytosteam.com/wp/wp-content/themes/phytosteams/assets/images/mainvisual_01.webp"
+                            <source media="(max-width: 1023px)" data-srcset="/assets/img/top/bg_01_sp.webp">
+                            <img draggable='false' class="lazyload" data-src="/assets/img/top/bg_01.webp "
                                 alt="Umi to Taico">
                         </picture>
                     </div>
                     <div class="swiper-slide">
                         <picture>
-                            <source media='(max-width:1023px)'
-                                srcset='https://phytosteam.com/wp/wp-content/themes/phytosteams/assets/images/mainvisual_03_sp.webp'>
-                            <img draggable='false' class="lazyload"
-                                src="https://phytosteam.com/wp/wp-content/themes/phytosteams/assets/images/mainvisual_03.webp"
+                            <source media='(max-width: 1023px)' data-srcset='/assets/img/top/bg_01_sp.webp'>
+                            <img draggable='false' class="lazyload" data-src="/assets/img/top/bg_01.webp"
                                 alt="Umi to Taico">
                         </picture>
                     </div>
@@ -354,8 +344,8 @@
             <div class="top_bottom">
                 <a href="#" target="_blank" class="top_reservation" id="reservation">
                     <div class="text">
-                        <svg role="img" aria-label="RESERVATION" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120"
-                            height="120" viewBox="0 0 120 120">
+                        <svg role="img" aria-label="RESERVATION" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
                             <defs>
                                 <clipPath id="clip-path-reversation">
                                     <rect id="Rectangle_100" data-name="Rectangle 100" width="120" height="120"
@@ -431,8 +421,8 @@
                         </svg>
                     </div>
                     <div class="arrow">
-                        <svg role="img" aria-label="RESERVATION" xmlns="http://www.w3.org/2000/svg" width="31.207" height="15.414"
-                            viewBox="0 0 31.207 15.414">
+                        <svg role="img" aria-label="RESERVATION" xmlns="http://www.w3.org/2000/svg" width="31.207"
+                            height="15.414" viewBox="0 0 31.207 15.414">
                             <g id="Group_22" data-name="Group 22" transform="translate(0.5 0.707)">
                                 <line id="Line_1" data-name="Line 1" x2="30" transform="translate(0 7)" fill="none"
                                     stroke="#fff" stroke-linecap="round" stroke-width="1" />
@@ -454,7 +444,7 @@
     <!-- intro// -->
     <div class="intro">
         <div class="intro_container">
-            <div class="intro_top">
+            <div class="intro_top js-fade">
                 <h1>
                     コピーが入ります <br />
                     コピーが入ります
@@ -470,7 +460,7 @@
                 </p>
             </div>
 
-            <div class="intro_bottom">
+            <div class="intro_bottom js-fade">
                 <div class="map">
                     <svg role="img" aria-label="Umi to Taico" id="svg" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" width="860" height="462.914"
@@ -740,7 +730,9 @@
                 <!-- access// -->
                 <section id="access">
                     <div class="access">
-                        <div class="access_container">access</div>
+                        <div class="access_container">
+                            access
+                        </div>
                     </div>
                 </section>
                 <!-- //access -->
@@ -749,13 +741,16 @@
 
             <!-- @footer -->
             <footer class="c-footer">
-                <div class="c-footer_container">footer</div>
+                <div class="c-footer_container">
+                    footer
+                </div>
             </footer>
             <!-- @@footer -->
         </div>
     </div>
 
     <!-- @script -->
+    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>

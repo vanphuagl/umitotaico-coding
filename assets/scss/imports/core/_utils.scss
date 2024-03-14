@@ -7,6 +7,17 @@
   display: none !important;
 }
 
+@include maxW(1023px) {
+  .pc-only {
+    display: none !important;
+  }
+
+  .sp-only {
+    display: block !important;
+  }
+}
+
+// ttcommons fonts
 .ttcommons-fonts {
   font-family: $ttcommons-fonts;
 }
@@ -21,13 +32,24 @@
   font-weight: 100;
 }
 
-@include maxW(1023px) {
-  .pc-only {
-    display: none !important;
-  }
+// lazy load image
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
 
-  .sp-only {
-    display: block !important;
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+// scroll fade
+.js-fade {
+  opacity: 0;
+
+  &.inview {
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
   }
 }
 
@@ -64,7 +86,6 @@
     left: 100%;
   }
 }
-
 
 @keyframes reservation-ring {
   0% {
