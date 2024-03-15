@@ -100,3 +100,12 @@ const closeMenu = () => {
 };
 
 addEventOnElements(menuLinks, "click", closeMenu);
+
+["resize", "pageshow", "load"].forEach((evt) => {
+  window.addEventListener(evt, () => {
+    if (window.innerWidth > 1023) {
+      menu.classList.remove("--active");
+      document.body.classList.remove("--disable-scroll");
+    }
+  });
+});

@@ -1,2 +1,72 @@
 /* Components
 ------------------------------------------------------------*/
+
+.c-bottom {
+  display: flex;
+  gap: 40px;
+  align-items: baseline;
+
+  .desc {
+    display: flex;
+    gap: 8px;
+    font-size: 1.4rem;
+
+    a {
+      text-decoration: underline;
+      text-decoration-color: rgba($color: #000000, $alpha: 0.5);
+      text-underline-offset: 3px;
+    }
+  }
+
+  .copyright {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .circle {
+      width: 15px;
+      height: 15px;
+      border: 0.6px solid $black-cl;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: 1.6rem;
+        margin: 0 auto;
+      }
+    }
+
+    p {
+      font-size: 1.8rem;
+      margin-top: 5px;
+    }
+  }
+
+  @include maxW(1023px) {
+    flex-direction: column-reverse;
+    gap: 0;
+
+    .desc {
+      font-size: 1.2rem;
+    }
+
+    .copyright {
+      margin-top: 20px;
+
+      .circle {
+        width: 12px;
+        height: 12px;
+
+        span {
+          font-size: 1.1rem;
+        }
+      }
+
+      p {
+        margin-top: 0;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

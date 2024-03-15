@@ -2,4 +2,11 @@
 ------------------------------------------------------------*/
 
 .c-footer {
+  &_container {
+    padding: 45px 50px;
+
+    @include maxW(1023px) {
+        padding: 20px;
+    }
+  }
 }
