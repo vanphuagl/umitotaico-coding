@@ -13,6 +13,14 @@
   box-sizing: border-box;
 }
 
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -56,6 +64,6 @@ main {
 }
 
 ::selection {
-  background: var(--main-text-cl);
-  color: #fff;
+  background: #ededed;
+  color: #000;
 }

@@ -18,6 +18,14 @@ const appHeight = () => {
     "--app-height",
     `${document.documentElement.clientHeight}px`
   );
+
+  // height menu
+  const windowHeight = Math.max(
+    document.documentElement.clientHeight,
+    window.innerHeight || 0
+  );
+
+  document.querySelector("[data-menu]").style.height = windowHeight + "px";
 };
 window.addEventListener("resize", appHeight);
 appHeight();
@@ -52,7 +60,7 @@ const reservation = document.getElementById("reservation");
 
 ["scroll", "resize", "pageshow", "load"].forEach((evt) => {
   window.addEventListener(evt, () => {
-    document.documentElement.scrollTop + 850 >
+    document.documentElement.scrollTop + 1000 >
     document.getElementById("layout").offsetTop
       ? reservation.classList.add("--active")
       : reservation.classList.remove("--active");
@@ -101,6 +109,8 @@ const closeMenu = () => {
 
 addEventOnElements(menuLinks, "click", closeMenu);
 
+/* ------------------------------ resize window ----------------------------- */
+
 ["resize", "pageshow", "load"].forEach((evt) => {
   window.addEventListener(evt, () => {
     if (window.innerWidth > 1023) {
@@ -108,4 +118,16 @@ addEventOnElements(menuLinks, "click", closeMenu);
       document.body.classList.remove("--disable-scroll");
     }
   });
+});
+
+/* ------------------------------ stay section ------------------------------ */
+
+const mvSwiper = new Swiper(".is-photoSwiper", {
+  speed: 1000,
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+  allowTouchMove: false,
+  parallax: true,
 });

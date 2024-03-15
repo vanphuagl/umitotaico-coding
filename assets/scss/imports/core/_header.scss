@@ -7,15 +7,15 @@
   left: 0;
   z-index: 50;
 
+  &.is-invert {
+    mix-blend-mode: difference;
+    filter: invert(1);
+  }
+
   &_nav {
     position: absolute;
     top: 40px;
     right: 45px;
-
-    &.is-invert {
-      mix-blend-mode: difference;
-      filter: invert(1);
-    }
   }
 
   &_left {

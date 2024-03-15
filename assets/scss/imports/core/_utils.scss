@@ -32,6 +32,10 @@
   font-weight: 100;
 }
 
+.txt-white {
+  color: $white-cl;
+}
+
 // lazy load image
 .lazyload,
 .lazyloading {
@@ -40,7 +44,11 @@
 
 .lazyloaded {
   opacity: 1;
-  transition: opacity 500ms ease-in-out;
+  // transition: opacity 0.8s ease-in-out;
+}
+
+.--pad-def {
+  padding: 0 45px;
 }
 
 // scroll fade

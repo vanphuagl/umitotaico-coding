@@ -85,6 +85,7 @@ nav,
 section,
 svg,
 a,
+picture,
 main {
   display: block;
 }
@@ -156,8 +157,7 @@ img {
   vertical-align: top;
 }
 
-a,
-a img {
+a {
   transition: 0.3s ease-in-out;
 }
 
