@@ -205,6 +205,12 @@
         }
       }
 
+      &.--menu-active {
+        .bg {
+          background-color: #967f4b !important;
+        }
+      }
+
       @include maxW(1023px) {
         padding: 10px;
 
