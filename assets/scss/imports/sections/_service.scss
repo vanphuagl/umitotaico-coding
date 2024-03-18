@@ -134,19 +134,180 @@
         visibility: visible;
       }
 
+      @include maxW(1023px) {
+        padding: 0;
+      }
+
       .popup-close {
         cursor: pointer;
         position: absolute;
         top: 50px;
         right: 50px;
+        z-index: 1;
+
+        @include maxW(1023px) {
+          top: 25px;
+          right: 25px;
+
+          svg {
+            width: 15px;
+            height: 15px;
+
+            line {
+              stroke: $black-cl;
+            }
+          }
+        }
       }
 
       .popup-inner {
         width: 54.86%;
         height: max-content;
-        border-radius: 2px;
         background-color: #f8f8f2;
-        padding: 35px 60px;
+
+        @include maxW(1023px) {
+          width: 100%;
+        }
+      }
+
+      .popup-body {
+        background-image: url(/assets/img/bg_noise.webp);
+        background-repeat: repeat;
+        mix-blend-mode: multiply;
+      }
+
+      .popup-head {
+        padding-top: 35px;
+        margin-bottom: 80px;
+        font-size: 4rem;
+        line-height: 1.52;
+        letter-spacing: 2.4px;
+
+        @include maxW(1023px) {
+          padding-top: 50px;
+          margin-bottom: 60px;
+          font-size: 2.8rem;
+          line-height: 1.66;
+          letter-spacing: 1.68px;
+        }
+      }
+
+      .popup-title {
+        font-family: $ttcommons-fonts;
+        font-size: 3.2rem;
+        font-weight: 100;
+        line-height: 1.66;
+        letter-spacing: 1.92px;
+
+        @include maxW(1023px) {
+          font-size: 2.4rem;
+          line-height: 1.67;
+          letter-spacing: 1.44px;
+        }
+      }
+
+      .popup-desc {
+        margin-top: 40px;
+        font-size: 1.4rem;
+        line-height: 1.93;
+        letter-spacing: 0.56px;
+        text-align: justify;
+        font-feature-settings: "palt" 1;
+
+        @include maxW(1023px) {
+          margin-top: 35px;
+          font-size: 1.3rem;
+          line-height: 1.85;
+          letter-spacing: 0.52px;
+        }
+      }
+
+      .popup-list {
+        margin-top: 55px;
+
+        p {
+          font-size: 1.4rem;
+          line-height: 1.5;
+          letter-spacing: 0.56px;
+        }
+
+        .rows {
+          border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+          padding: 30px 25px 30px 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 25px;
+
+          &:last-child {
+            border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+          }
+        }
+
+        @include maxW(1023px) {
+          margin-top: 30px;
+
+          p {
+            font-size: 1.3rem;
+            line-height: 1.73;
+            letter-spacing: 0.52;
+          }
+
+          .rows {
+            padding: 25px 10px 25px 0;
+            gap: 15px;
+          }
+        }
+      }
+
+      .popup-notes {
+        margin-top: 55px;
+
+        p {
+          font-size: 1.3rem;
+          line-height: 1.85;
+          letter-spacing: 0.52px;
+          text-indent: -8px;
+          margin-left: 8px;
+
+          a {
+            display: inline;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+          }
+        }
+
+        @include maxW(1023px) {
+          margin-top: 35px;
+
+          p {
+            font-size: 1.2rem;
+            line-height: 1.75;
+            letter-spacing: 0.48px;
+          }
+        }
+      }
+
+      .popup-link {
+        margin: 50px auto 0;
+
+        @include maxW(1023px) {
+          margin: 35px auto 0;
+        }
+      }
+
+      .popup-content {
+        padding: 60px;
+        border-bottom: 1px solid $white-cl;
+
+        &:first-child {
+          padding-top: 0;
+        }
+        
+
+        @include maxW(1023px) {
+          padding: 50px 22px;
+        }
       }
     }
   }
