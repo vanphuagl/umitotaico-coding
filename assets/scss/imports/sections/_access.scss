@@ -1,0 +1,11 @@
+.homepage {
+  .access {
+    &_container {
+      padding-top: 220px;
+
+      @include maxW(1023px) {
+        padding-top: 150px;
+      }
+    }
+  }
+}

@@ -172,17 +172,17 @@ componentSwiper[7].on("slideChange", (sw) => {
 });
 
 // other options
-const pickupSwiper = new Swiper(".js-option", {
+const optionSwiper = new Swiper(".js-option", {
   breakpoints: {
     0: {
-      slidesPerView: 1.2,
-      spaceBetween: 20,
+      slidesPerView: 1.3,
+      spaceBetween: 22,
       allowTouchMove: true,
       draggable: true,
     },
     1024: {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 50,
       draggable: false,
       allowTouchMove: false,
     },
