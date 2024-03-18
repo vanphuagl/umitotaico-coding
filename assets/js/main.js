@@ -186,3 +186,29 @@ for (let i = 0; i < accordion.length; i++) {
     }
   });
 }
+
+/* --------------------------- toggle aria-hidden --------------------------- */
+
+const toggleHidden = (id) => {
+  let attr = document.getElementById(id).attributes;
+
+  if (attr["aria-hidden"].value == "true") {
+    document.getElementById(id).setAttribute("aria-hidden", "false");
+  } else {
+    document.getElementById(id).setAttribute("aria-hidden", "true");
+  }
+};
+
+/* ---------------------------------- popup --------------------------------- */
+
+const [popupToggler, popup] = [
+  document.querySelectorAll("[data-service-toggler]"),
+  document.querySelector("[data-service-popup]"),
+];
+
+const togglePopup = () => {
+  popup.classList.toggle("--active");
+  document.body.classList.toggle("--disable-scroll");
+};
+
+addEventOnElements(popupToggler, "click", togglePopup);

@@ -3984,7 +3984,7 @@
 
 
                                         <div class="c-accordion">
-                                            <button class="c-accordion_btn js-accordion">
+                                            <div class="c-accordion_btn js-accordion">
                                                 <p>ご利用料金・ご予約</p>
 
                                                 <div class="plus">
@@ -4003,7 +4003,7 @@
                                                         </g>
                                                     </svg>
                                                 </div>
-                                            </button>
+                                            </div>
 
                                             <div class="c-accordion_panel js-panel">
                                                 <table class="c-accordion_table">
@@ -4247,7 +4247,7 @@
                                         </p>
 
                                         <div class="c-accordion">
-                                            <button class="c-accordion_btn js-accordion">
+                                            <div class="c-accordion_btn js-accordion">
                                                 <p>ご利用料金・ご予約</p>
 
                                                 <div class="plus">
@@ -4266,7 +4266,7 @@
                                                         </g>
                                                     </svg>
                                                 </div>
-                                            </button>
+                                            </div>
 
                                             <div class="c-accordion_panel js-panel">
                                                 <table class="c-accordion_table">
@@ -4636,12 +4636,11 @@
                                 <div class="c-swiper_control">
                                     <div class="swiper-pagination c-swiper_pagination"></div>
                                 </div>
-                                
                                 <div class="service_overlay"></div>
 
                                 <div class="service_content --pad-def">
                                     <h2 class="c-heading pc-only">Service</h2>
-                                    
+
                                     <ul class="service_menu">
                                         <li class="active" data-menu-service="1">Auto BBQ Service</li>
                                         <li data-menu-service="2">Tent Sauna</li>
@@ -4652,7 +4651,8 @@
                                         テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります（80字程度）
                                     </p>
 
-                                    <a href="#" class="c-button button-white" target="_blank" rel="noopener noreferrer">
+                                    <button aria-label="ポツプアップを開く" aria-haspopup="true" class="c-button button-white"
+                                        data-service-toggler>
                                         <p>ご利用詳細</p>
                                         <svg role="img" aria-label="Plus" xmlns="http://www.w3.org/2000/svg" width="13"
                                             height="13" viewBox="0 0 13 13">
@@ -4665,7 +4665,30 @@
                                                     stroke="#000" stroke-linecap="square" stroke-width="1" />
                                             </g>
                                         </svg>
-                                    </a>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="service_popup" id="service_popup" aria-hidden="true" data-service-popup>
+                                <button class="popup-close" onclick="toggleHidden('service_popup')"
+                                    aria-label="ポシプアップを閉じる" aria-haspopup="false" data-service-toggler>
+                                    <svg role="img" aria-label="Close Popup Service" xmlns="http://www.w3.org/2000/svg"
+                                        width="30.707" height="30.707" viewBox="0 0 30.707 30.707">
+                                        <g id="close" transform="translate(-1359.646 -44.646)">
+                                            <line id="Line_33" data-name="Line 33" x2="30" y2="30"
+                                                transform="translate(1360 45)" fill="none" stroke="#fff"
+                                                stroke-width="1" />
+                                            <line id="Line_34" data-name="Line 34" x1="30" y2="30"
+                                                transform="translate(1360 45)" fill="none" stroke="#fff"
+                                                stroke-width="1" />
+                                        </g>
+                                    </svg>
+                                </button>
+
+                                <div class="popup-inner">
+                                    <div class="popup-body">
+                                        hello
+                                    </div>
                                 </div>
                             </div>
                         </div>
