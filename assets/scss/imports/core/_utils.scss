@@ -37,18 +37,22 @@
 }
 
 // lazy load image
-.lazyload,
-.lazyloading {
-  opacity: 0;
-}
+// .lazyload,
+// .lazyloading {
+//   opacity: 0;
+// }
 
-.lazyloaded {
-  opacity: 1;
-  // transition: opacity 0.8s ease-in-out;
-}
+// .lazyloaded {
+//   opacity: 1;
+//   transition: opacity 0.8s ease-in-out;
+// }
 
 .--pad-def {
-  padding: 0 45px;
+  padding: 0 50px;
+
+  @include maxW(1023px) {
+    padding: 0 22px;
+  }
 }
 
 // scroll fade

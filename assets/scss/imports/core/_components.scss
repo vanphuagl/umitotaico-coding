@@ -1,11 +1,44 @@
 /* Components
 ------------------------------------------------------------*/
 
-.c-title {
+.c-heading {
   font-size: 7rem;
   font-weight: 100;
   line-height: 1.67;
   letter-spacing: 4.2px;
+
+  @include maxW(1023px) {
+    font-size: 4.2rem;
+    letter-spacing: 2.52px;
+  }
+}
+
+.c-title {
+  h3 {
+    font-size: 4.2rem;
+    letter-spacing: 2.52px;
+    line-height: 1.5;
+  }
+
+  span {
+    font-size: 1.7rem;
+    letter-spacing: 0.68px;
+    text-align: justify;
+  }
+
+  @include maxW(1023px) {
+    h3 {
+      font-size: 2.8rem;
+      letter-spacing: 1.68px;
+      line-height: 1.66;
+      display: block;
+    }
+
+    span {
+      font-size: 1.4rem;
+      letter-spacing: 0.56px;
+    }
+  }
 }
 
 .c-bottom {
@@ -75,6 +108,349 @@
         margin-top: 0;
         font-size: 1.4rem;
       }
+    }
+  }
+}
+
+// swiper
+
+.c-swiper {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+
+  .swiper-slide {
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &_control {
+    mix-blend-mode: difference;
+    position: absolute;
+    bottom: 35px;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: initial;
+      margin: 0;
+      width: 30px;
+      height: auto;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 0;
+      border: 0;
+    }
+
+    @include maxW(1023px) {
+      bottom: 20px;
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none;
+      }
+    }
+  }
+
+  &_pagination {
+    &.swiper-pagination {
+      position: initial;
+      width: auto;
+      transform: inherit;
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper-pagination-bullet {
+      width: 15px;
+      height: 2px;
+      background-color: $white-cl;
+      opacity: 0.3;
+      transition-duration: 0.5s;
+      border-radius: 12px;
+    }
+
+    .swiper-pagination-bullet-active {
+      width: 45px;
+      opacity: 1;
+    }
+  }
+
+  &_img {
+    display: block;
+    z-index: 1;
+    position: relative;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+
+    padding-bottom: var(--padding-bottom);
+    background-color: #ebc9ad;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// accordion
+
+.c-accordion {
+  position: relative;
+  border-top: 1px solid $black-cl;
+  border-bottom: 1px solid $black-cl;
+  transition: 0.3s ease-in-out;
+  margin-top: 75px;
+
+  @include maxW(1023px) {
+    margin-top: 60px;
+  }
+
+  &_btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    cursor: pointer;
+
+    &.active {
+      .plus {
+        transform: rotate(45deg);
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      letter-spacing: 0.6px;
+    }
+
+    .plus {
+      margin-right: 25px;
+      transition: 0.3s linear;
+    }
+
+    @include maxW(1023px) {
+      padding: 25px 0;
+
+      p {
+        font-size: 1.4rem;
+        letter-spacing: 0.56px;
+      }
+
+      .plus {
+        margin-right: 18px;
+      }
+    }
+  }
+
+  &_panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+    }
+
+    tr {
+      border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+    }
+
+    th:first-child,
+    td:first-child {
+      width: 44.05%;
+    }
+
+    th,
+    td {
+      font-size: 1.4rem;
+      letter-spacing: 0.56px;
+      font-weight: 300;
+      text-align: left;
+      padding: 30px 0;
+      word-break: break-word;
+    }
+
+    @include maxW(1023px) {
+      th,
+      td {
+        font-size: 1.3rem;
+        line-height: 1.73;
+        letter-spacing: 0.52px;
+        padding: 12px 0;
+      }
+    }
+  }
+
+  &_content {
+    margin-top: 25px;
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.85;
+      letter-spacing: 0.52px;
+      margin-left: 10px;
+      text-indent: -10px;
+
+      &::before {
+        content: "*";
+        padding-right: 2px;
+      }
+
+      a {
+        display: inline-block;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+    }
+
+    @include maxW(1023px) {
+      p {
+        font-size: 1.2rem;
+        letter-spacing: 0.48px;
+        line-height: 1.75;
+      }
+    }
+  }
+
+  &_link {
+    margin: 45px auto 50px;
+    width: 100%;
+    height: 60px;
+    border-radius: 60px;
+    border: 1px solid $black-cl;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      border: 1px solid #967f4b;
+      background-color: #967f4b;
+
+      p {
+        color: $white-cl;
+      }
+
+      svg {
+        g {
+          fill: #967f4b;
+          stroke: $white-cl;
+        }
+      }
+    }
+
+    svg {
+      position: absolute;
+      right: 30px;
+
+      g {
+        transition: 0.3s ease-in-out;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      letter-spacing: 0.6px;
+      transition: 0.3s ease-in-out;
+    }
+
+    @include maxW(1023px) {
+      margin: 40px auto 45px;
+
+      p {
+        font-size: 1.4rem;
+        letter-spacing: 0.56px;
+      }
+    }
+  }
+}
+
+// button
+.c-button {
+  margin-top: 35px;
+  width: 210px;
+  height: 60px;
+  border-radius: 60px;
+  border: 1px solid $black-cl;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+
+  &.button-white {
+    border: 1px solid $white-cl;
+
+    svg {
+      line {
+        stroke: $white-cl;
+      }
+    }
+  }
+
+  svg {
+    position: absolute;
+    right: 30px;
+
+    line {
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    letter-spacing: 0.6px;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover {
+    opacity: 1;
+    border: 1px solid #967f4b;
+    background-color: #967f4b;
+
+    p {
+      color: $white-cl;
+    }
+
+    svg {
+      line {
+        stroke: $white-cl;
+      }
+    }
+  }
+
+  @include maxW(1023px) {
+    margin-top: 30px;
+    width: 154px;
+    height: 55px;
+
+    p {
+      font-size: 1.4rem;
+      letter-spacing: 0.56px;
+      margin-right: 25px;
     }
   }
 }

@@ -13,7 +13,11 @@
 @import "imports/core/footer";
 
 /* pages */
-@import "imports/pages/home";
+@import "imports/sections/home";
+@import "imports/sections/stay";
+@import "imports/sections/faci";
+@import "imports/sections/service";
+@import "imports/sections/access";
 
 /* utils */
 @import "imports/core/utils";

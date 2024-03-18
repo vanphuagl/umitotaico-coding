@@ -7,7 +7,7 @@
   .bg {
     &_container {
       width: 100%;
-      height: 100%;
+      height: 100vh;
       position: fixed;
       top: 0;
       left: 0;
@@ -46,7 +46,6 @@
       top: 0;
       width: 100%;
       height: 100%;
-      //   background-color: rgba($color: #000000, $alpha: 0.3);
       background-color: $black-cl;
       z-index: 1;
     }
@@ -248,7 +247,6 @@
         font-weight: 300;
         letter-spacing: 3.2px;
         line-height: 1.54;
-        text-align: justify;
       }
 
       p {
@@ -256,7 +254,6 @@
         font-size: 1.8rem;
         letter-spacing: 1.44px;
         line-height: 1.94;
-        text-align: justify;
         font-feature-settings: "palt" 1;
       }
 
@@ -305,116 +302,4 @@
     }
   }
   // ==== end intro
-
-  // ==== stay
-  .stay {
-    &_container {
-      padding-top: 220px;
-    }
-
-    &_photo {
-      margin-top: 50px;
-
-      &_top {
-        display: flex;
-        justify-content: space-between;
-        gap: 10.42%;
-
-        .pos_01 {
-          --padding-bottom: calc(640 / 960 * 100%);
-          position: relative;
-          width: 66.67%;
-
-          picture {
-            padding-bottom: var(--padding-bottom);
-            background-color: #aac4ab;
-          }
-        }
-
-        .pos_02 {
-          --padding-bottom: calc(495 / 330 * 100%);
-          position: relative;
-          margin-top: -100px;
-          width: calc(100% - 10.42% - 66.67%);
-
-          picture {
-            padding-bottom: var(--padding-bottom);
-            background-color: #906741;
-          }
-        }
-      }
-
-      &_bottom {
-        margin-top: 8.33%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 8.33%;
-        padding: 0 45px 0 8.33%;
-
-        .content {
-          flex: 1;
-
-          h3 {
-            font-size: 2.4rem;
-            font-weight: 300;
-            line-height: 1.45;
-            letter-spacing: 1.44px;
-            text-align: justify;
-          }
-
-          p {
-            margin-top: 50px;
-            font-size: 1.5rem;
-            line-height: 1.93;
-            letter-spacing: 0.6px;
-            text-align: justify;
-          }
-        }
-
-        .slide {
-          --padding-bottom: calc(447 / 670 * 100%);
-          position: relative;
-          width: var(--padding-bottom);
-
-          picture {
-            padding-bottom: var(--padding-bottom);
-            background-color: #ebc9ad;
-          }
-        }
-      }
-    }
-
-    &_img {
-      display: block;
-      z-index: 1;
-      position: relative;
-      height: 100%;
-      transform: translate3d(0, 0, 0);
-
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    &_swiper {
-      z-index: 1;
-      position: relative;
-      overflow: hidden;
-      transform: translate3d(0, 0, 0);
-
-      .swiper-slide {
-        z-index: 1;
-        position: relative;
-        height: 40vw;
-        overflow: hidden;
-      }
-    }
-  }
-  // ==== end stay
 }

@@ -15,21 +15,25 @@
   &_nav {
     position: absolute;
     top: 40px;
-    right: 45px;
+    right: 50px;
   }
 
   &_left {
     position: absolute;
     top: 40px;
-    left: 45px;
+    left: 50px;
 
     @include maxW(1023px) {
-      position: initial;
+      top: 20px;
+      left: 22px;
+    }
+  }
 
-      svg {
-        width: auto;
-        height: 80px;
-      }
+  &_right {
+    @include maxW(1023px) {
+      position: absolute;
+      top: 20px;
+      right: 25px;
     }
   }
 
@@ -102,34 +106,23 @@
     padding: 20px;
   }
 
-  &_pad {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-  }
-
   &_toggle {
     margin-top: 8px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 10px;
     cursor: pointer;
 
     p {
       font-size: 1.6rem;
     }
-
-    svg {
-      margin-top: -2px;
-    }
   }
 
   @include maxW(1023px) {
-    &_logo {
-      svg {
-        width: auto;
-        height: 80px;
-      }
+    &_pad {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 25px 20px 22px;
     }
   }
 }

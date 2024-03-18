@@ -1,0 +1,112 @@
+.homepage {
+  .service {
+    &_swiper {
+      .c-swiper_img {
+        --padding-bottom: 100vh;
+        background-color: #aac4ab;
+      }
+
+      @include maxW(1023px) {
+        .c-swiper_control {
+          display: none;
+        }
+      }
+    }
+
+    &_heading {
+      @include maxW(1023px) {
+        position: absolute;
+        top: 105px;
+        left: 22px;
+        z-index: 2;
+      }
+    }
+
+    &_content {
+      position: absolute;
+      bottom: 50px;
+      z-index: 1;
+      color: $white-cl;
+      width: 40%;
+
+      .desc {
+        font-size: 1.5rem;
+        line-height: 1.93;
+        letter-spacing: 0.6px;
+      }
+
+      @include maxW(1023px) {
+        width: 100%;
+        bottom: 30px;
+      }
+    }
+
+    &_menu {
+      margin-top: 35px;
+      margin-bottom: 115px;
+
+      li {
+        font-size: 3.2rem;
+        line-height: 1.66;
+        letter-spacing: 1.92px;
+        font-weight: 100;
+        font-family: $ttcommons-fonts;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: opaciy 0.5s ease-in-out;
+        width: fit-content;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 45%;
+          left: -50px;
+          width: 0;
+          height: 1px;
+          background-color: $white-cl;
+          transform: tranlsateY(-50%);
+          transition: width 0.5s ease-in-out;
+        }
+
+        &.active {
+          opacity: 1;
+
+          &:after {
+            width: 30px;
+          }
+        }
+      }
+
+      @include maxW(1023px) {
+        margin: 0;
+
+        li {
+          font-size: 2.4rem;
+          line-height: 1.5;
+          letter-spacing: 1.44px;
+
+          &:after {
+            left: -22px;
+          }
+
+          &.active {
+            &:after {
+              width: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    &_overlay {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+}

@@ -25,7 +25,7 @@ const appHeight = () => {
     window.innerHeight || 0
   );
 
-  document.querySelector("[data-menu]").style.height = windowHeight + "px";
+  document.getElementById("cMenu").style.height = windowHeight + "px";
 };
 window.addEventListener("resize", appHeight);
 appHeight();
@@ -77,7 +77,7 @@ const jsFade = document.querySelectorAll(".js-fade");
     let bottom = scrollTop + window.innerHeight;
 
     jsFade.forEach((items) => {
-      if (bottom > items.offsetTop + 150) {
+      if (bottom > window.scrollY + items.getBoundingClientRect().y) {
         items.classList.add("inview");
       } else {
         items.classList.remove("inview");
@@ -120,14 +120,69 @@ addEventOnElements(menuLinks, "click", closeMenu);
   });
 });
 
-/* ------------------------------ stay section ------------------------------ */
+/* ----------------------------- swiper parallax ---------------------------- */
 
-const mvSwiper = new Swiper(".is-photoSwiper", {
+const componentSwiper = new Swiper(".js-swiper", {
   speed: 1000,
   autoplay: {
     delay: 5000,
+    disableOnInteraction: false,
   },
   loop: true,
-  allowTouchMove: false,
   parallax: true,
+  pagination: {
+    el: ".c-swiper_pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".c-swiper_button_next",
+    prevEl: ".c-swiper_button_prev",
+  },
+  breakpoints: {
+    0: {
+      allowTouchMove: true,
+    },
+    1024: {
+      allowTouchMove: false,
+    },
+  },
 });
+
+// handle label service swiper (componentSwiper[7])
+let index = 0;
+const dataMenuService = document.querySelectorAll(".service_menu li");
+dataMenuService.forEach((item) =>
+  item.addEventListener("click", handleInitSwiper)
+);
+
+function handleInitSwiper(event) {
+  let menu = event.target.getAttribute("data-menu-service");
+  index = [...dataMenuService].findIndex(
+    (item) => item.getAttribute("data-menu-service") === menu
+  );
+  componentSwiper[7].slideTo(index + 1);
+  // console.log("index", index, event.target);
+}
+
+componentSwiper[7].on("slideChange", (sw) => {
+  for (let i = 0; i < dataMenuService.length; i++) {
+    dataMenuService[i].classList.remove("active");
+  }
+  dataMenuService[sw.realIndex].classList.add("active");
+});
+
+/* -------------------------------- accordion ------------------------------- */
+
+let accordion = document.getElementsByClassName("js-accordion");
+let panel = document.getElementsByClassName("js-panel");
+
+for (let i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    if (panel[i].style.maxHeight) {
+      panel[i].style.maxHeight = null;
+    } else {
+      panel[i].style.maxHeight = panel[i].scrollHeight + "px";
+    }
+  });
+}

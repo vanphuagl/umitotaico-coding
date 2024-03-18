@@ -13,14 +13,6 @@
   box-sizing: border-box;
 }
 
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-}
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -47,6 +39,8 @@ body {
 .layout {
   background-color: $main-bg-cl;
   position: relative;
+  width: 100%;
+  top: 1px;
   z-index: 2;
 
   &_wrapper {
@@ -61,6 +55,10 @@ body {
 
 main {
   flex: 1;
+}
+
+section {
+  overflow: hidden;
 }
 
 ::selection {
