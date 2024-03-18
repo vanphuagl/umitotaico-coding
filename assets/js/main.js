@@ -171,6 +171,24 @@ componentSwiper[7].on("slideChange", (sw) => {
   dataMenuService[sw.realIndex].classList.add("active");
 });
 
+// other options
+const pickupSwiper = new Swiper(".js-option", {
+  breakpoints: {
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      allowTouchMove: true,
+      draggable: true,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      draggable: false,
+      allowTouchMove: false,
+    },
+  },
+});
+
 /* -------------------------------- accordion ------------------------------- */
 
 let accordion = document.getElementsByClassName("js-accordion");

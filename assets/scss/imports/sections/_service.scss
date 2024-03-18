@@ -121,7 +121,7 @@
       display: flex;
       justify-content: center;
       overflow: auto;
-      background-color: rgba(0, 0, 0, 0.75);
+      background-color: rgba(0, 0, 0, 0.8);
       will-change: opacity;
 
       opacity: 0;
@@ -309,6 +309,10 @@
           padding: 50px 22px;
         }
       }
+    }
+
+    &_option {
+      margin-top: 100px;
     }
   }
 }
