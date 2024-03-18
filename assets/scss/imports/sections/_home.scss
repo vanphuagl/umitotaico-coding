@@ -83,10 +83,12 @@
 
         .left {
           @include mid(false);
+          width: 214px;
 
           svg {
-            width: auto;
-            height: 252.01px;
+            width: 100%;
+            height: 100%;
+            display: block;
           }
         }
 

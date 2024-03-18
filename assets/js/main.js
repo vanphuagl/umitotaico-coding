@@ -1,5 +1,20 @@
 "use strict";
 
+/* --------------------------------- loading -------------------------------- */
+
+const loading = document.getElementById("loading");
+const wrapper = document.getElementById("homepage");
+
+window.addEventListener("DOMContentLoaded", (e) => {
+  setTimeout(() => {
+    loading.classList.add("--height");
+  }, 1100);
+  setTimeout(function () {
+    loading.classList.add("--done");
+    wrapper.classList.add("--fade");
+  }, 2900);
+});
+
 /* ---------------------- add event on multiple element --------------------- */
 
 const addEventOnElements = function (elements, eventType, callback) {
@@ -230,3 +245,34 @@ const togglePopup = () => {
 };
 
 addEventOnElements(popupToggler, "click", togglePopup);
+
+/* ----------------------------- scrollIntoView ----------------------------- */
+
+window.addEventListener(
+  "DOMContentLoaded",
+  (e) => {
+    let links = document.getElementsByTagName("A");
+
+    for (let i = 0; i < links.length; i++) {
+      if (!links[i].hash) {
+        continue;
+      }
+
+      if (links[i].origin + links[i].pathname != self.location.href) {
+        continue;
+      }
+
+      ((anchorPoint) => {
+        links[i].addEventListener(
+          "click",
+          (e) => {
+            anchorPoint.scrollIntoView(true);
+            e.preventDefault();
+          },
+          false
+        );
+      })(document.getElementById(links[i].hash.replace(/#/, "")));
+    }
+  },
+  false
+);

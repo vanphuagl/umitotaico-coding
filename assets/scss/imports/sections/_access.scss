@@ -2,9 +2,158 @@
   .access {
     &_container {
       padding-top: 220px;
+      margin-bottom: 100px;
 
       @include maxW(1023px) {
-        padding-top: 150px;
+        padding-top: 130px;
+        margin-bottom: 58px;
+      }
+    }
+
+    &_map {
+      margin-top: 30px;
+      width: 100%;
+      height: 41.66vw;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+
+      @include maxW(1023px) {
+        margin-top: 20px;
+        padding: 0 !important;
+        height: 100%;
+        aspect-ratio: 1/1;
+      }
+    }
+
+    &_rows {
+      margin-top: 50px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row-reverse;
+
+      @include maxW(1023px) {
+        display: block;
+        margin-top: 80px;
+      }
+    }
+
+    &_left,
+    &_right {
+      width: 50%;
+
+      @include maxW(1023px) {
+        width: 100%;
+      }
+    }
+
+    &_left {
+      .address {
+        margin-top: 45px;
+        font-size: 1.5rem;
+        line-height: 2;
+        letter-spacing: 0.42px;
+      }
+
+      .social {
+        margin-top: 45px;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 15px;
+
+          p {
+            font-size: 1.4rem;
+            letter-spacing: 0.56px;
+          }
+
+          p.instagram {
+            font-size: 1.8rem;
+            letter-spacing: 1.08px;
+            margin-top: 3px;
+          }
+        }
+      }
+
+      @include maxW(1023px) {
+        margin-top: 80px;
+
+        .logo {
+          svg {
+            width: auto;
+            height: 60px;
+          }
+        }
+
+        .address {
+          font-size: 1.3rem;
+          line-height: 1.85;
+          letter-spacing: 0.52px;
+        }
+
+        .social {
+          margin-top: 40px;
+
+          a {
+            p {
+              font-size: 1.3rem;
+              letter-spacing: 0.52px;
+
+              &.instagram {
+                font-size: 1.6rem;
+                letter-spacing: 0.96px;
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &_right {
+      .title {
+        font-size: 1.5rem;
+        line-height: 1.93;
+        letter-spacing: 0.6px;
+      }
+
+      .map {
+        margin-top: 45px;
+
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .desc {
+        margin-top: 45px;
+        font-size: 1.4rem;
+        line-height: 1.86;
+        letter-spacing: 0.56px;
+      }
+
+      @include maxW(1023px) {
+        .title {
+          font-size: 1.4rem;
+          line-height: 2;
+          letter-spacing: 0.56px;
+        }
+
+        .map {
+          margin-top: 35px;
+        }
+
+        .desc {
+          margin-top: 35px;
+          font-size: 1.3rem;
+          line-height: 1.73;
+          letter-spacing: 0.52px;
+        }
       }
     }
   }
