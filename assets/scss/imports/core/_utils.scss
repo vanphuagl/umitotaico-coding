@@ -45,8 +45,17 @@
 
 // .lazyloaded {
 //   opacity: 1;
-//   transition: opacity 0.8s ease-in-out;
 // }
+
+img {
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.8s ease-in-out, transform 0s;
+
+  &.lazyloaded {
+    opacity: 1;
+  }
+}
 
 .--pad-def {
   padding: 0 50px;
