@@ -3,16 +3,17 @@
 /* --------------------------------- loading -------------------------------- */
 
 const loading = document.getElementById("loading");
+const logoLoading = document.querySelector(".c-loading_logo");
 const wrapper = document.getElementById("homepage");
 
 window.addEventListener("DOMContentLoaded", (e) => {
   setTimeout(() => {
-    loading.classList.add("--height");
-  }, 1100);
+    logoLoading.classList.add("--fade");
+  }, 800);
   setTimeout(function () {
     loading.classList.add("--done");
     wrapper.classList.add("--fade");
-  }, 2900);
+  }, 2700);
 });
 
 /* ---------------------- add event on multiple element --------------------- */

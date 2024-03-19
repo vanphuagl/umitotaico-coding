@@ -11,13 +11,7 @@
   z-index: 9999999;
   overflow: hidden;
 
-  transition: 1s ease-in;
-
-  // opacity: 0;
-
-  // &.--height {
-  //   opacity: 1;
-  // }
+  transition: 0.8s ease-in;
 
   &.--done {
     background-color: unset;
@@ -39,6 +33,13 @@
     top: 48.5%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    opacity: 0;
+    transition: 0.8s ease-in;
+
+    &.--fade {
+      opacity: 1;
+    }
 
     svg {
       width: 100%;
