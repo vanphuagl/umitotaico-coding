@@ -42,13 +42,13 @@
     }
 
     &_menu {
-      margin-top: 35px;
-      margin-bottom: 115px;
+      margin-top: 25px;
+      margin-bottom: 100px;
 
       li {
         font-size: 3.2rem;
-        line-height: 1.66;
-        letter-spacing: 1.92px;
+        line-height: 1.28;
+        letter-spacing: 2.4px;
         font-weight: 100;
         font-family: $ttcommons-fonts;
         cursor: pointer;
@@ -311,7 +311,7 @@
     }
 
     &_option {
-      margin-top: 100px;
+      margin-top: 105px;
 
       @include maxW(1023px) {
         margin-top: 50px;
@@ -319,7 +319,7 @@
     }
 
     &_list {
-      margin-top: 60px;
+      margin-top: 56px;
       position: relative;
       overflow: hidden;
 
@@ -348,7 +348,7 @@
       }
 
       .title {
-        margin-top: 55px;
+        margin-top: 45px;
         font-size: 1.8rem;
         line-height: 1.72;
         letter-spacing: 0.72px;
@@ -363,7 +363,7 @@
 
       .desc,
       .link {
-        margin-top: 35px;
+        margin-top: 20px;
         font-size: 1.5rem;
         line-height: 1.87;
         letter-spacing: 0.6px;
@@ -382,6 +382,7 @@
       }
 
       .link {
+        margin-top: 25px;
         text-decoration: underline;
         text-underline-offset: 3px;
       }

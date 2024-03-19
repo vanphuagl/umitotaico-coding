@@ -56,7 +56,7 @@
   font-size: 7rem;
   font-weight: 100;
   line-height: 1.67;
-  letter-spacing: 4.2px;
+  letter-spacing: 4px;
 
   @include maxW(1023px) {
     font-size: 4.2rem;
@@ -67,7 +67,7 @@
 .c-title {
   h3 {
     font-size: 4.2rem;
-    letter-spacing: 2.52px;
+    letter-spacing: 3.3px;
     line-height: 1.5;
   }
 
@@ -277,7 +277,7 @@
   border-top: 1px solid $black-cl;
   border-bottom: 1px solid $black-cl;
   transition: 0.3s ease-in-out;
-  margin-top: 75px;
+  margin-top: 50px;
 
   @include maxW(1023px) {
     margin-top: 60px;
@@ -330,6 +330,7 @@
       border-collapse: collapse;
       width: 100%;
       border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+      margin-top: 22px;
     }
 
     tr {
@@ -338,12 +339,13 @@
 
     th:first-child,
     td:first-child {
-      width: 44.05%;
+      width: 44.6%;
     }
 
     th,
     td {
       font-size: 1.4rem;
+      line-height: 1.35;
       letter-spacing: 0.56px;
       font-weight: 300;
       text-align: left;
@@ -363,11 +365,11 @@
   }
 
   &_content {
-    margin-top: 25px;
+    margin-top: 18px;
 
     p {
       font-size: 1.3rem;
-      line-height: 1.85;
+      line-height: 1.75;
       letter-spacing: 0.52px;
       margin-left: 10px;
       text-indent: -10px;
@@ -427,7 +429,7 @@
 
   svg {
     position: absolute;
-    right: 30px;
+    right: 35px;
 
     g {
       transition: 0.3s ease-in-out;
@@ -436,7 +438,7 @@
 
   p {
     font-size: 1.5rem;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.65px;
     transition: 0.3s ease-in-out;
   }
 
@@ -484,7 +486,7 @@
 
   p {
     font-size: 1.5rem;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.65px;
     transition: 0.3s ease-in-out;
   }
 

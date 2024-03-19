@@ -14,14 +14,14 @@
 
   &_nav {
     position: absolute;
-    top: 40px;
+    top: 45px;
     right: 50px;
   }
 
   &_left {
     position: absolute;
     top: 40px;
-    left: 50px;
+    left: 45px;
 
     @include maxW(1023px) {
       top: 20px;
@@ -41,8 +41,8 @@
     font-family: $ttcommons-fonts;
     font-weight: 200;
     font-size: 2.4rem;
-    line-height: 1.54;
-    letter-spacing: 1.92px;
+    line-height: 1.3;
+    letter-spacing: 1px;
     width: fit-content;
     text-align: right;
     margin-left: auto;

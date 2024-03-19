@@ -1,7 +1,7 @@
 .homepage {
   .faci {
     &_container {
-      margin: 240px auto;
+      margin: 240px auto 250px;
 
       @include maxW(1023px) {
         margin: 85px auto 160px;
@@ -23,7 +23,7 @@
     }
 
     &_swiper {
-      margin-top: 40px;
+      margin-top: 26px;
 
       .c-swiper_img {
         --padding-bottom: calc(670 / 1340 * 100%);
@@ -40,8 +40,8 @@
     }
 
     &_autosite {
-      margin-top: 35px;
-      margin-bottom: 135px;
+      margin-top: 45px;
+      margin-bottom: 150px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: flex-start;
@@ -71,8 +71,8 @@
 
       h3 {
         font-size: 3.2rem;
-        line-height: 1.44;
-        letter-spacing: 1.92px;
+        line-height: 1.3;
+        letter-spacing: 3.3px;
       }
 
       p {
@@ -108,8 +108,8 @@
     &_content {
       .desc {
         font-size: 1.5rem;
-        line-height: 1.93;
-        letter-spacing: 0.6px;
+        line-height: 1.8;
+        letter-spacing: 2px;
         text-align: justify;
         font-feature-settings: "palt" 1;
       }
@@ -119,7 +119,7 @@
         line-height: 1.5;
         letter-spacing: 0.52px;
         text-align: justify;
-        margin-top: 50px;
+        margin-top: 22px;
         margin-bottom: 50px;
       }
 
