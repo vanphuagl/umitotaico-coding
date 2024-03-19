@@ -13,15 +13,15 @@
 
   transition: 1s ease-in;
 
-  opacity: 0;
+  // opacity: 0;
 
-  &.--height {
-    opacity: 1;
-  }
+  // &.--height {
+  //   opacity: 1;
+  // }
 
   &.--done {
     background-color: unset;
-    opacity: 0 !important;
+    opacity: 0;
     visibility: hidden;
     pointer-events: none;
   }
@@ -35,8 +35,8 @@
 
   &_logo {
     width: 321.84px;
-    position: relative;
-    top: 50%;
+    position: absolute;
+    top: 48.5%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -86,8 +86,7 @@
   @include maxW(1023px) {
     h3 {
       font-size: 2.8rem;
-      letter-spacing: 1.68px;
-      line-height: 1.66;
+      letter-spacing: 2.2px;
       display: block;
     }
 
@@ -143,6 +142,7 @@
     p {
       font-size: 1.8rem;
       margin-top: 5px;
+      letter-spacing: 1.2px;
     }
   }
 
@@ -156,7 +156,7 @@
     }
 
     .copyright {
-      margin-top: 20px;
+      margin-top: 25px;
 
       .circle {
         width: 12px;
@@ -280,7 +280,7 @@
   margin-top: 50px;
 
   @include maxW(1023px) {
-    margin-top: 60px;
+    margin-top: 35px;
   }
 
   &_btn {
@@ -316,7 +316,7 @@
       }
 
       .plus {
-        margin-right: 18px;
+        margin-right: 20px;
       }
     }
   }
@@ -354,12 +354,21 @@
     }
 
     @include maxW(1023px) {
+      table {
+        margin-top: 20px;
+      }
+
+      th:first-child,
+      td:first-child {
+        width: 50%;
+      }
+
       th,
       td {
         font-size: 1.3rem;
-        line-height: 1.73;
+        line-height: 1.5;
         letter-spacing: 0.52px;
-        padding: 12px 0;
+        padding: 11px 0;
       }
     }
   }
@@ -387,10 +396,12 @@
     }
 
     @include maxW(1023px) {
+      margin-top: 20px;
+
       p {
         font-size: 1.2rem;
         letter-spacing: 0.48px;
-        line-height: 1.75;
+        line-height: 1.55;
       }
     }
   }
@@ -443,11 +454,15 @@
   }
 
   @include maxW(1023px) {
-    margin: 40px auto 45px;
+    margin: 45px auto 45px;
 
     p {
       font-size: 1.4rem;
       letter-spacing: 0.56px;
+    }
+
+    svg {
+      right: 30px;
     }
   }
 }
@@ -515,6 +530,10 @@
       font-size: 1.4rem;
       letter-spacing: 0.56px;
       margin-right: 25px;
+    }
+
+    svg {
+      right: 23px;
     }
   }
 }

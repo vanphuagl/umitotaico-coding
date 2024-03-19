@@ -5,7 +5,7 @@
       margin-bottom: 100px;
 
       @include maxW(1023px) {
-        padding-top: 130px;
+        padding-top: 126px;
         margin-bottom: 58px;
       }
     }
@@ -21,7 +21,7 @@
       }
 
       @include maxW(1023px) {
-        margin-top: 20px;
+        margin-top: 10px;
         padding: 0 !important;
         height: 100%;
         aspect-ratio: 1/1;
@@ -36,7 +36,7 @@
 
       @include maxW(1023px) {
         display: block;
-        margin-top: 80px;
+        margin-top: 70px;
       }
     }
 
@@ -80,7 +80,7 @@
       }
 
       @include maxW(1023px) {
-        margin-top: 80px;
+        margin-top: 77px;
 
         .logo {
           svg {
@@ -90,8 +90,9 @@
         }
 
         .address {
+          margin-top: 40px;
           font-size: 1.3rem;
-          line-height: 1.85;
+          line-height: 1.7;
           letter-spacing: 0.52px;
         }
 
@@ -99,13 +100,15 @@
           margin-top: 40px;
 
           a {
+            margin-bottom: 12px;
+            
             p {
               font-size: 1.3rem;
               letter-spacing: 0.52px;
 
               &.instagram {
                 font-size: 1.6rem;
-                letter-spacing: 0.96px;
+                letter-spacing: 1.6px;
                 margin-top: 0;
               }
             }
@@ -145,13 +148,13 @@
         }
 
         .map {
-          margin-top: 35px;
+          margin-top: 28px;
         }
 
         .desc {
-          margin-top: 35px;
+          margin-top: 30px;
           font-size: 1.3rem;
-          line-height: 1.73;
+          line-height: 1.5;
           letter-spacing: 0.52px;
         }
       }

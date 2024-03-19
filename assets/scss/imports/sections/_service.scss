@@ -16,7 +16,7 @@
     &_heading {
       @include maxW(1023px) {
         position: absolute;
-        top: 105px;
+        top: 100px;
         left: 22px;
         z-index: 2;
       }
@@ -83,8 +83,8 @@
 
         li {
           font-size: 2.4rem;
-          line-height: 1.5;
-          letter-spacing: 1.44px;
+          line-height: 1.2;
+          letter-spacing: 1.95px;
 
           &:after {
             left: -22px;
@@ -161,7 +161,7 @@
       }
 
       .popup-inner {
-        width: 54.86%;
+        width: 58.5%;
         height: max-content;
         background-color: #f8f8f2;
 
@@ -177,18 +177,18 @@
       }
 
       .popup-head {
-        padding-top: 35px;
-        margin-bottom: 80px;
+        padding-top: 38px;
+        margin-bottom: 60px;
         font-size: 4rem;
         line-height: 1.52;
-        letter-spacing: 2.4px;
+        letter-spacing: 3px;
 
         @include maxW(1023px) {
           padding-top: 50px;
-          margin-bottom: 60px;
+          margin-bottom: 45px;
           font-size: 2.8rem;
           line-height: 1.66;
-          letter-spacing: 1.68px;
+          letter-spacing: 1.95px;
         }
       }
 
@@ -197,33 +197,32 @@
         font-size: 3.2rem;
         font-weight: 100;
         line-height: 1.66;
-        letter-spacing: 1.92px;
+        letter-spacing: 2.4px;
 
         @include maxW(1023px) {
           font-size: 2.4rem;
-          line-height: 1.67;
-          letter-spacing: 1.44px;
+          line-height: 1.5;
+          letter-spacing: 1.8px;
         }
       }
 
       .popup-desc {
-        margin-top: 40px;
+        margin-top: 25px;
         font-size: 1.4rem;
-        line-height: 1.93;
-        letter-spacing: 0.56px;
+        line-height: 1.9;
+        letter-spacing: 1.3px;
         text-align: justify;
         font-feature-settings: "palt" 1;
 
         @include maxW(1023px) {
-          margin-top: 35px;
+          margin-top: 25px;
           font-size: 1.3rem;
-          line-height: 1.85;
-          letter-spacing: 0.52px;
+          line-height: 1.7;
         }
       }
 
       .popup-list {
-        margin-top: 55px;
+        margin-top: 45px;
 
         p {
           font-size: 1.4rem;
@@ -254,18 +253,18 @@
           }
 
           .rows {
-            padding: 25px 10px 25px 0;
+            padding: 20px 20px 20px 0;
             gap: 15px;
           }
         }
       }
 
       .popup-notes {
-        margin-top: 55px;
+        margin-top: 47px;
 
         p {
           font-size: 1.3rem;
-          line-height: 1.85;
+          line-height: 1.74;
           letter-spacing: 0.52px;
           text-indent: -8px;
           margin-left: 8px;
@@ -278,11 +277,11 @@
         }
 
         @include maxW(1023px) {
-          margin-top: 35px;
+          margin-top: 30px;
 
           p {
             font-size: 1.2rem;
-            line-height: 1.75;
+            line-height: 1.5;
             letter-spacing: 0.48px;
           }
         }
@@ -292,12 +291,12 @@
         margin: 50px auto 0;
 
         @include maxW(1023px) {
-          margin: 35px auto 0;
+          margin: 38px auto 0;
         }
       }
 
       .popup-content {
-        padding: 60px;
+        padding: 45px 60px 60px;
         border-bottom: 1px solid $white-cl;
 
         &:first-child {
@@ -305,7 +304,7 @@
         }
 
         @include maxW(1023px) {
-          padding: 50px 22px;
+          padding: 50px 22px 60px;
         }
       }
     }
@@ -324,7 +323,7 @@
       overflow: hidden;
 
       @include maxW(1023px) {
-        margin: 45px -22px 0;
+        margin: 43px -22px 0;
         padding: 0 22px;
       }
     }
@@ -354,12 +353,13 @@
         letter-spacing: 0.72px;
 
         @include maxW(1023px) {
-          margin-top: 30px;
+          margin-top: 25px;
           font-size: 1.6rem;
           line-height: 1.81;
           letter-spacing: 0.64px;
         }
       }
+      
 
       .desc,
       .link {
@@ -374,9 +374,9 @@
         }
 
         @include maxW(1023px) {
-          margin-top: 25px;
+          margin-top: 12px;
           font-size: 1.3rem;
-          line-height: 1.73;
+          line-height: 1.5;
           letter-spacing: 0.52px;
         }
       }
@@ -385,6 +385,10 @@
         margin-top: 25px;
         text-decoration: underline;
         text-underline-offset: 3px;
+
+        @include maxW(1023px) {
+          margin-top: 20px;
+        }
       }
     }
   }
