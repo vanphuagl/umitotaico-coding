@@ -49,11 +49,11 @@ appHeight();
 /* ------------------------ scroll fadeout main photo ----------------------- */
 
 const bgOverlay = document.getElementById("bgOverlay");
-const layout = document.getElementById("layout");
+const intro = document.getElementById("intro");
 
 ["scroll", "resize", "pageshow", "load"].forEach((evt) => {
   window.addEventListener(evt, () => {
-    let cal = layout.offsetHeight + 900;
+    let cal = intro.offsetHeight + 900;
     let value = 0.3 + window.scrollY / cal;
 
     value > 0.8
@@ -140,10 +140,6 @@ addEventOnElements(menuLinks, "click", closeMenu);
 
 const componentSwiper = new Swiper(".js-swiper", {
   speed: 1000,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
   loop: true,
   parallax: true,
   pagination: {
@@ -164,7 +160,31 @@ const componentSwiper = new Swiper(".js-swiper", {
   },
 });
 
-// handle label service swiper (componentSwiper[7])
+/* ----------------------------- service swiper ----------------------------- */
+
+const serviceSwiper = new Swiper(".js-serviceSwiper", {
+  speed: 1000,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  parallax: true,
+  pagination: {
+    el: ".c-swiper_pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      allowTouchMove: true,
+    },
+    1024: {
+      allowTouchMove: false,
+    },
+  },
+});
+
+// handle label service swiper
 let index = 0;
 const dataMenuService = document.querySelectorAll(".service_menu li");
 dataMenuService.forEach((item) =>
@@ -176,18 +196,18 @@ function handleInitSwiper(event) {
   index = [...dataMenuService].findIndex(
     (item) => item.getAttribute("data-menu-service") === menu
   );
-  componentSwiper[7].slideTo(index + 1);
-  // console.log("index", index, event.target);
+  serviceSwiper.slideTo(index + 1);
 }
 
-componentSwiper[7].on("slideChange", (sw) => {
+serviceSwiper.on("slideChange", (sw) => {
   for (let i = 0; i < dataMenuService.length; i++) {
     dataMenuService[i].classList.remove("active");
   }
   dataMenuService[sw.realIndex].classList.add("active");
 });
 
-// other options
+/* -------------------------- other options swiper -------------------------- */
+
 const optionSwiper = new Swiper(".js-option", {
   breakpoints: {
     0: {

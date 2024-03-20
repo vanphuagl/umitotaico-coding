@@ -140,12 +140,13 @@
 
       .popup-close {
         cursor: pointer;
-        position: absolute;
+        position: fixed;
         top: 50px;
         right: 50px;
         z-index: 1;
 
         @include maxW(1023px) {
+          position: absolute;
           top: 25px;
           right: 25px;
 
