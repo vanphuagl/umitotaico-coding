@@ -298,6 +298,7 @@ window.addEventListener(
   false
 );
 
+// catching scroll-blocking warning
 (function () {
   if (typeof EventTarget !== "undefined") {
     let func = EventTarget.prototype.addEventListener;

@@ -258,8 +258,11 @@
       color: $white-cl;
 
       @include maxW(1023px) {
-        width: 100%;
         margin: 170px auto 135px;
+      }
+
+      @include maxW(767px) {
+        width: 100%;
       }
     }
 
@@ -314,6 +317,17 @@
 
       @include maxW(1023px) {
         margin-top: 75px;
+        padding: 0 20px;
+
+        // .map {
+        //   width: 590.01px;
+        //   margin-left: -100px;
+        //   margin-right: -75px;
+        // }
+      }
+
+      @include maxW(414px) {
+        padding: 0;
 
         .map {
           width: 590.01px;
