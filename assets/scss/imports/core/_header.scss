@@ -23,9 +23,19 @@
     top: 40px;
     left: 45px;
 
+    img {
+      width: auto;
+      height: 140px;
+      object-fit: contain;
+    }
+
     @include maxW(1023px) {
       top: 18px;
       left: 20px;
+
+      img {
+        height: 80px;
+      }
     }
   }
 
@@ -88,6 +98,14 @@
   flex-direction: column;
   justify-content: center;
 
+  &_logo {
+    img {
+      width: auto;
+      height: 80px;
+      object-fit: contain;
+    }
+  }
+
   &_top {
     position: fixed;
     width: 100%;
@@ -113,6 +131,43 @@
     align-items: baseline;
     gap: 10px;
     cursor: pointer;
+
+    .hamburger {
+      span {
+        width: 15px;
+        height: 1px;
+        background-color: $black-cl;
+        margin-bottom: 3px;
+        display: block;
+
+        &:last-child {
+          margin-bottom: initial;
+        }
+      }
+    }
+
+    .close {
+      position: relative;
+      width: 15px;
+
+      span {
+        display: block;
+        width: 15px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        top: -6px;
+        left: 2px;
+
+        &:first-child {
+          transform: rotate(45deg);
+        }
+
+        &:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
 
     p {
       font-size: 1.6rem;

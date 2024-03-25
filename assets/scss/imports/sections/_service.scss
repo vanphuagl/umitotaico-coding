@@ -143,20 +143,37 @@
         position: fixed;
         top: 50px;
         right: 50px;
+        width: 30px;
+        height: 30px;
         z-index: 1;
+
+        &:before,
+        &:after {
+          position: absolute;
+          content: "";
+          top: -7px;
+          height: 45px;
+          width: 1px;
+          background-color: $white-cl;
+        }
+
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
 
         @include maxW(1023px) {
           position: absolute;
           top: 25px;
-          right: 25px;
+          right: 15px;
 
-          svg {
-            width: 15px;
-            height: 15px;
-
-            line {
-              stroke: $black-cl;
-            }
+          &:before,
+          &:after {
+            top: 5px;
+            height: 20px;
+            background-color: $black-cl;
           }
         }
       }
@@ -334,16 +351,11 @@
         width: 100%;
         height: 100%;
 
-        svg {
-          display: block;
-          height: 100%;
+        img {
           width: 100%;
-        }
-
-        @include maxW(1023px) {
-          svg {
-            margin-top: 1px;
-          }
+          height: 100%;
+          object-fit: contain;
+          mix-blend-mode: multiply;
         }
       }
 
@@ -360,7 +372,6 @@
           letter-spacing: 0.64px;
         }
       }
-      
 
       .desc,
       .link {

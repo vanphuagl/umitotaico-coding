@@ -198,10 +198,23 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        height: 14px;
+
+        img {
+          width: 30px;
+          height: 100%;
+          object-fit: contain;
+        }
       }
 
-      .text svg {
+      .text {
         animation: reservation-ring 20s linear 0s infinite;
+
+        img {
+          width: 120px;
+          height: 120px;
+          object-fit: contain;
+        }
       }
 
       &.--active {
@@ -219,12 +232,15 @@
       @include maxW(1023px) {
         padding: 10px;
 
-        .arrow svg {
-          width: 20px;
+        .arrow {
           height: 10px;
+
+          img {
+            width: 20px;
+          }
         }
 
-        .text svg {
+        .text img {
           width: 85px;
           height: 85px;
         }
@@ -289,18 +305,18 @@
         width: 100%;
         height: 100%;
 
-        svg {
+        img {
           width: 100%;
           height: 100%;
+          object-fit: contain;
         }
       }
 
       @include maxW(1023px) {
         margin-top: 75px;
 
-        .map svg {
+        .map {
           width: 590.01px;
-          height: auto;
           margin-left: -100px;
           margin-right: -75px;
         }
