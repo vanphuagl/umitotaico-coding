@@ -101,10 +101,19 @@
         gap: 20px;
         margin-bottom: 26px;
 
-        .logo img {
-          height: 35px;
-          margin-top: 5px;
-          margin-left: 1px;
+        .logo {
+          img {
+            height: 35px;
+            margin-top: 5px;
+            margin-left: 1px;
+          }
+
+          &.logo-cafe,
+          &.logo-reception {
+            img {
+              height: 35px;
+            }
+          }
         }
 
         h3 {
