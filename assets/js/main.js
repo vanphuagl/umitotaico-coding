@@ -164,10 +164,10 @@ const componentSwiper = new Swiper(".js-swiper", {
 
 const serviceSwiper = new Swiper(".js-serviceSwiper", {
   speed: 1000,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
   loop: true,
   parallax: true,
   pagination: {

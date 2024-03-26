@@ -34,7 +34,6 @@
 
           .c-swiper_img {
             --padding-bottom: calc(640 / 960 * 100%);
-            background-color: #aac4ab;
           }
 
           @include maxW(1023px) {
@@ -53,7 +52,6 @@
 
           .c-swiper_img {
             --padding-bottom: calc(495 / 330 * 100%);
-            background-color: #906741;
           }
 
           @include maxW(1023px) {
@@ -130,7 +128,6 @@
 
           .c-swiper_img {
             --padding-bottom: calc(447 / 670 * 100%);
-            background-color: #ebc9ad;
           }
 
           @include maxW(1023px) {

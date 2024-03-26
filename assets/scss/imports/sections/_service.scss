@@ -3,7 +3,6 @@
     &_swiper {
       .c-swiper_img {
         --padding-bottom: 100vh;
-        background-color: #aac4ab;
       }
 
       @include maxW(1023px) {
