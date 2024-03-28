@@ -16,30 +16,6 @@ window.addEventListener("DOMContentLoaded", (e) => {
   }, 2700);
 });
 
-// lazy load
-let observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(function (entry) {
-    if (entry.intersectionRatio > 0 || entry.isIntersecting) {
-      const image = entry.target;
-      observer.unobserve(image);
-
-      if (image.hasAttribute("src")) {
-        // Image has been loaded already
-        setTimeout(() => {
-          image.classList.add("loaded");
-        }, 300);
-        return;
-      }
-      // Removing the observer
-      observer.unobserve(image);
-    }
-  });
-});
-
-document.querySelectorAll("img").forEach((el) => {
-  observer.observe(el);
-});
-
 /* ---------------------- add event on multiple element --------------------- */
 
 const addEventOnElements = function (elements, eventType, callback) {
@@ -336,3 +312,27 @@ window.addEventListener(
     };
   }
 })();
+
+// lazy load
+let observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(function (entry) {
+    if (entry.intersectionRatio > 0 || entry.isIntersecting) {
+      const image = entry.target;
+      observer.unobserve(image);
+
+      if (image.hasAttribute("src")) {
+        // Image has been loaded already
+        setTimeout(() => {
+          image.classList.add("loaded");
+        }, 300);
+        return;
+      }
+      // Removing the observer
+      observer.unobserve(image);
+    }
+  });
+});
+
+document.querySelectorAll("img").forEach((el) => {
+  observer.observe(el);
+});
